@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Creates a named pipe.
+
+fifo=/tmp/port_98_fifo
+rm -f "$fifo"
+mkfifo "$fifo"
+
+# Listen on port 98.
+nc -l -p 98 < "$fifo" | while read line; do
+    echo "$line"
+done
+
+rm -f "$fifo"
