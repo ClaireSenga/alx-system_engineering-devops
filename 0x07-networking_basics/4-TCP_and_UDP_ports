@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Display listening ports
+
+echo "Listening Ports:"
+netstat -tuln | grep 'LISTEN'
+
+echo "PID and Program Name:"
+netstat -tuln | grep 'LISTEN' | awk '{print $7}' | cut -d'/' -f1 | while read pid; do
+    program=$(ps -p $pid -o comm=)
+    echo "PID: $pid, Program: $program"
+done
