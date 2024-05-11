@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 # Checks if script is running in Docker
 
 if grep -q docker /proc/1/cgroup; then
