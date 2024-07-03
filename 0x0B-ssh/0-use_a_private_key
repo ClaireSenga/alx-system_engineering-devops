@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Allows us to connect to my server using the pri-key with ubuntu
+ssh -i ~/.ssh/id_rsa ubuntu@18.235.249.46
