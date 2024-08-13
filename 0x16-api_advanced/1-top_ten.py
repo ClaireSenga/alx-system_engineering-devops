@@ -5,7 +5,6 @@
 import requests
 from sys import argv
 
-
 def top_ten(subreddit):
     '''
         returns the top ten posts for given subreddit.
