@@ -20,3 +20,8 @@ def number_of_subscribers(subreddit):
     else:
         # Return 0 if the subreddit is invalid or other errors occur
         return 0
+
+
+if __name__ == "__main__":
+    subreddit = "test"
+    print(number_of_subscribers(subreddit))
